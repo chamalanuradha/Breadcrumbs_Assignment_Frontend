@@ -15,7 +15,7 @@ const Login = () => {
       const response = await axios.post('http://127.0.0.1:8000/api/login', { email, password });
       const token = response.data.token;
       localStorage.setItem('token', token);
-      navigate('/productions');
+      navigate('/productlist');
     } catch (error) {
       console.error('Login error', error);
       setError('Login failed, please check your credentials');
