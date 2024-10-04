@@ -1,11 +1,10 @@
 .login-container {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    background-color: #f7f7f7;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
@@ -29,7 +28,7 @@
     border-radius: 5px;
   }
   
-  button {
+.btn-login {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -39,7 +38,21 @@
     cursor: pointer;
   }
   
-  button:hover {
+.btn-login:hover {
     background-color: #0056b3;
   }
+
+  .redirect-text {
+    text-align: center;
+    margin-top: 15px;
+  }
   
+  .redirect-text a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .redirect-text a:hover {
+    text-decoration: underline;
+  }

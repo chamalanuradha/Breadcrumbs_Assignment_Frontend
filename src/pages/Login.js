@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import './Login.css'
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/login', { email, password });
+      const token = response.data.token;
+      localStorage.setItem('token', token);
+      navigate('/productions');
+    } catch (error) {
+      console.error('Login error', error);
+      setError('Login failed, please check your credentials');
+    }
   };
 
   return (
@@ -37,9 +48,11 @@ const Login = () => {
           />
         </div>
 
-        <button type="submit">Login</button>
+        {error && <p className="error-text">{error}</p>}
+
+        <button className="btn-login" type="submit">Login</button>
       </form>
-      
+
       <p className="redirect-text">
         Don't have an account? <Link to="/register">Register here</Link>
       </p>
