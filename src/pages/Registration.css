@@ -46,7 +46,7 @@
   }
   
   /* Button styling */
-  button {
+  .btn_register {
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
@@ -57,8 +57,8 @@
     cursor: pointer;
   }
   
-  /* Button hover effect */
-  button:hover {
+  /* .btn_register hover effect */
+  .btn_register:hover {
     background-color: #45a049;
   }
   

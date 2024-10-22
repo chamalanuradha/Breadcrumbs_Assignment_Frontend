@@ -68,7 +68,7 @@ const Registration = () => {
 
         {error && <p className="error-text">{error}</p>}
 
-        <button type="submit">Register</button>
+        <button className='btn_register' type="submit">Register</button>
       </form>
 
       <p className="redirect-text-login">
