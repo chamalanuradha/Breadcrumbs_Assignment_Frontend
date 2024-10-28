@@ -44,7 +44,8 @@ const ProductList = () => {
   };
 
   return (
-    <div className="product-list">
+    <div className="container">
+<div className="product-list">
       <h2>Products</h2>
       <Link to="/addproduct" className="btn-add">Add Product</Link>
       <div className="product-cards">
@@ -59,6 +60,8 @@ const ProductList = () => {
         ))}
       </div>
     </div>
+    </div>
+    
   );
 };
 

@@ -23,7 +23,8 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="add-product">
+    <div className="container">
+<div className="add-product">
       <h2>Add Product</h2>
       <form onSubmit={handleAddProduct}>
         <input type="text" 
@@ -47,6 +48,8 @@ const AddProduct = () => {
         <button type="submit">Add Product</button>
       </form>
     </div>
+    </div>
+    
   );
 };
 

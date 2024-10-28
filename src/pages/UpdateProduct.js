@@ -35,7 +35,8 @@ const UpdateProduct = () => {
   };
 
   return (
-    <div className="update-product">
+    <div className="container">
+<div className="update-product">
       <h2>Update Product</h2>
       <form onSubmit={handleUpdateProduct}>
         <input type="text" 
@@ -59,6 +60,8 @@ const UpdateProduct = () => {
         <button type="submit">Update Product</button>
       </form>
     </div>
+    </div>
+    
   );
 };
 
