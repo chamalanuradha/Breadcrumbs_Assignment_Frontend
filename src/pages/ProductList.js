@@ -47,14 +47,14 @@ const ProductList = () => {
     <div className="container">
 <div className="product-list">
       <h2>Products</h2>
-      <Link to="/addproduct" className="btn-add">Add Product</Link>
-      <div className="product-cards">
+      <Link to="/addproduct" className="btn-add  item-right mb-2">Add Product</Link>
+      <div className="product-cards mt-5">
         {products.map(product => (
           <div key={product.id} className="product-card">
             <h3>{product.name}</h3>
             <p>Price: ${product.price}</p>
             <p>{product.description}</p>
-            <Link to={`/updateproduct/${product.id}`} className="btn-edit">Edit</Link>
+            <Link to={`/updateproduct/${product.id}`} className="btn-edit">Update</Link>
             <button className="btn-delete" onClick={() => handleDelete(product.id)}>Delete</button>
           </div>
         ))}
